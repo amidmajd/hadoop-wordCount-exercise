@@ -4,7 +4,7 @@
 
 To deploy an example HDFS cluster, run:
 ```
-  docker-compose up
+docker-compose up -d
 ```
 
 `docker-compose` creates a docker network that can be found by running `docker network list`, e.g. `dockerhadoop_default`.
@@ -16,6 +16,11 @@ Run `docker network inspect` on the network (e.g. `dockerhadoop_default`) to fin
 * Datanode: http://<dockerhadoop_IP_address>:9864/
 * Nodemanager: http://<dockerhadoop_IP_address>:8042/node
 * Resource manager: http://<dockerhadoop_IP_address>:8088/
+
+## Connecting to Containers
+```
+docker exec -it namenode /bin/bash
+```
 
 ## Configure Environment Variables
 
