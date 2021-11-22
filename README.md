@@ -12,8 +12,6 @@ docker exec -it namenode bash -c 'hdfs dfs -put -f /home/input.txt input'
 ## Running MapReduce Job
 ```
 docker exec -it namenode bash -c 'mapred streaming -files /home/src/mapper.py,/home/src/reducer.py -mapper mapper.py -reducer reducer.py -input input -output output'
-
-docker exec -it namenode bash -c 'hdfs dfs -cat output/part-00000'
 ```
 
 ## Getting Output
